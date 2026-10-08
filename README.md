@@ -33,3 +33,4 @@
 - 이모티콘 생성 완료 화면에 노출되던 내부 비용·예산 안내 문구 제거 — 예산 집행 로직은 그대로 두고 사용자 화면 노출만 없앰 ([#116](https://github.com/Linkshimcat/Glocalizer/pull/116))
 - 팀 README를 실제 코드 기준으로 갱신 — 초기 정보에 머물러 있던 기술 스택·기능 설명을 실측으로 교체. 번역 주력이 문서엔 "Groq"로 남아있었지만 실제(`render.yaml`)는 이미 OpenAI GPT-5.6로 바뀌어 있던 것, `package.json` 대조로 표에서 빠져있던 의존성(구글 로그인용 `@supabase/supabase-js` 등)을 찾아 반영하고 라이선스는 설치된 패키지의 실제 `package.json`에서 직접 확인 ([#117](https://github.com/Linkshimcat/Glocalizer/pull/117))
 - 팀원 보고로 안드로이드 일부 기종에서 상단 메뉴 한글이 음절 중간("시작하 기")에서 줄바꿈되는 버그 재현·수정 — 공용 Button 컴포넌트는 whitespace-nowrap이 내장돼 랜딩 CTA는 멀쩡했지만, 상단 네비게이션은 별도로 만든 버튼이라 이 속성이 빠져 있던 걸 컴포넌트 단위로 대조해 찾아냄 ([#121](https://github.com/Linkshimcat/Glocalizer/pull/121))
+- W5/W6 실사용자 보고서가 지목한 다운로드 전환율(27.3%) 저해 요인 3가지를 코드로 보완 — 일부 실패해도 상단이 항상 "준비됐어요"로만 뜨던 걸 실패 개수를 세어 경고로 전환, 촘촘한 썸네일 그리드에 묻혀있던 "글자 잔존" 경고를 Editor와 같은 배너 스타일로 격상, 미리보기 열 수를 줄여 카드를 키우고 확대 가능 여부를 돋보기 아이콘으로 드러냄 ([#124](https://github.com/Linkshimcat/Glocalizer/pull/124))
